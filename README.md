@@ -15,5 +15,5 @@ python app.py
 ```
 ## test the image
 ```bash
-python test_api.py
+python test_api.py images/cat.jpg
 ```
