@@ -36,9 +36,7 @@ def predict():
         if flask.request.files.get("image"):
             image = flask.request.files["image"].read()
             image = Image.open(io.BytesIO(image))
-
             image = prepare_image(image, target=(224, 224))
-
             preds = model.predict(image)
             results = imagenet_utils.decode_predictions(preds)
             data["predictions"] = []
@@ -46,7 +44,6 @@ def predict():
             for (imagenetID, label, prob) in results[0]:
                 r = {"label": label, "probability": float(prob)}
                 data["predictions"].append(r)
-
             data["success"] = True
 
     return flask.jsonify(data)
