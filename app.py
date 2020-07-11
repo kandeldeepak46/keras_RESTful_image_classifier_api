@@ -16,7 +16,7 @@ def load_model():
     model = ResNet50(weights="imagenet")
 
 
-def prepare_image(image, target):
+def _prepare_image(image, target):
     if image.mode != "RGB":
         image = image.convert("RGB")
 
@@ -37,7 +37,7 @@ def predict():
         if flask.request.files.get("image"):
             image = flask.request.files["image"].read()
             image = Image.open(io.BytesIO(image))
-            image = prepare_image(image, target=(224, 224))
+            image = _prepare_image(image, target=(224, 224))
             preds = model.predict(image)
             results = imagenet_utils.decode_predictions(preds)
             data["predictions"] = []
