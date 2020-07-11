@@ -20,4 +20,4 @@ $ python test_api.py images/cat.jpg
 ### Test the image via notebook
 ```bash
 $ from test_api import classify_image
-$ classify_image('path/to/image.jpg')
+$ classify_image('images/cat.jpg')
