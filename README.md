@@ -13,11 +13,11 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
-## Test the image  via command line arguments
+### Test the image  via command line arguments
 ```bash
 python test_api.py images/cat.jpg
 ```
-## Test the image via notebook
+### Test the image via notebook
 ```bash
 - from test_api import classify_image
 - classify_image('path/to/image.jpg')
