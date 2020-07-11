@@ -6,7 +6,7 @@ sample api for image classifier using keras and Flask
 $ git clone git@github.com:deepak-kandel/keras_REST_image_classifier.git
 $ cd keras_REST_image_classifier
 $ virtualenv --no-site-packages venv
-$vsource venv/Scripts/activate
+$ source venv/Scripts/activate
 $ pip install -r requirements.txt
 ```
 ## Run the local server
