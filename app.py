@@ -1,11 +1,12 @@
+import io
+import flask 
+import numpy as np
+from PIL import Image
+
+
 from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications import imagenet_utils
-
-from PIL import Image
-import numpy as np
-import flask
-import io
 
 app = flask.Flask(__name__)
 
