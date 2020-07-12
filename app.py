@@ -1,5 +1,5 @@
 import io
-import flask 
+import flask
 import numpy as np
 from PIL import Image
 

@@ -11,8 +11,8 @@ def classify_image(image_path: str):
 
     if not os.path.isfile(image_path):
         raise FileExistsError(f"The '{image_name}' does not exists in the path.")
-    
-    if image_extension not in ['.jpg', '.png', '.jpeg']:
+
+    if image_extension not in [".jpg", ".png", ".jpeg"]:
         raise ValueError("Expected only '.jpg' '.png', '.jpeg'")
 
     try:
@@ -34,7 +34,7 @@ def classify_image(image_path: str):
 def main():
     if len(sys.argv) == 1:
         raise SystemExit("Expected the image file. Exiting the process")
-    if len(sys.argv) > 2 :
+    if len(sys.argv) > 2:
         raise SystemExit("Expected only one image. Exiting the process")
     return classify_image(sys.argv[1])
 
