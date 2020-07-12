@@ -16,7 +16,7 @@ def load_model():
     model = ResNet50(weights="imagenet")
 
 
-def _prepare_image(image, target):
+def _prepare_image(image, target) -> np.ndarray:
     if image.mode != "RGB":
         image = image.convert("RGB")
 
