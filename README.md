@@ -1,4 +1,4 @@
-# keras_REST_image_classifier
+# keras_RESTful_image_classifier_api
 sample api for image classifier using keras and Flask
 
 # Usage
