@@ -40,7 +40,14 @@ def _prepare_image(image, target) -> np.ndarray:
 
 @app.route("/predict", methods=["POST"])
 def predict():
+    """
+    The predict function is called by the front end to predict the class of an image. The image is passed as a base64 string.
+    The model is loaded and the image is prepared for the prediction.
+    The class name and the probability of the prediction are returned as a JSON object.
+    The class name is the predicted class name and the probability is the probability of the prediction.
+    :return: The class name and the probability of the prediction as a JSON object.
 
+    """
     data = {"success": False}
 
     if flask.request.method == "POST":
