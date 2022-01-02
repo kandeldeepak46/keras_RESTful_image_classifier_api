@@ -39,7 +39,7 @@ def _prepare_image(image, target) -> np.ndarray:
 
 
 @app.route("/predict", methods=["POST"])
-def predict():
+def predict() -> str:
     """
     The predict function is called by the front end to predict the class of an image. The image is passed as a base64 string.
     The model is loaded and the image is prepared for the prediction.
