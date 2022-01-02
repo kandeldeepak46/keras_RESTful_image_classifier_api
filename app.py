@@ -12,6 +12,10 @@ app = flask.Flask(__name__)
 
 
 def load_model():
+    """
+    Load the model from the saved model file. This is a helper function. It is not required to call it. It is called by the predict function.
+    :return: The loaded model.
+    """
     global model
     model = ResNet50(weights="imagenet")
 
