@@ -5,7 +5,12 @@ import requests
 KERAS_REST_API_URL = "http://localhost:5000/predict"
 
 
-def classify_image(image_path: str):
+def classify_image(image_path: str) -> str:
+    """
+    Classify the image and return the result as a string of the predicted class name and the probability of the prediction in the form of a float.
+    :param image_path: The path to the image to be classified.
+    :return: The predicted class name and the probability of the prediction in the form of a string.
+    """
     base_name, image_extension = os.path.splitext(image_path)
     image_dir, image_name = os.path.split(image_path)
 
