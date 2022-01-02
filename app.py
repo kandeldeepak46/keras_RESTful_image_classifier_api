@@ -21,6 +21,12 @@ def load_model():
 
 
 def _prepare_image(image, target) -> np.ndarray:
+    """
+    Prepare the image for the prediction. This is a helper function. It is not required to call it. It is called by the predict function.
+    :param image: The image to be prepared.
+    :param target: The target size of the image.
+    :return: The prepared image.
+    """
     if image.mode != "RGB":
         image = image.convert("RGB")
 
