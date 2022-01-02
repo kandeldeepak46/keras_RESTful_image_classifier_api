@@ -36,7 +36,11 @@ def classify_image(image_path: str) -> str:
         print("Request failed")
 
 
-def main():
+def main() -> None:
+    """
+    The main function. It is called when the script is executed. It is not required to call it. It is called by the predict function. It is not required to call it. It is called by the predict function.
+    :return: None
+    """
     if len(sys.argv) == 1:
         raise SystemExit("Expected the image file. Exiting the process")
     if len(sys.argv) > 2:
